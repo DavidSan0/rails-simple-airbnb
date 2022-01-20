@@ -1,0 +1,44 @@
+
+<p><%= link_to "Add a new flat", new_flat_path %></p>
+
+
+<div class="grid">
+  <% @flats.each do |flat| %>
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= link_to flat.name, flat_path(flat) %></h2>
+          <p><%= flat.address %></p>
+          <p><%= flat.description %></p>
+        </div>
+        <div class="card-trip-icons">
+          <div class="card-trip-icons-nextto">
+            <h2 class="card-trip-pricing"><%= flat.price_per_night %></h2>
+            <i class="fas fa-euro-sign"></i> 
+          </div>
+              <div class="card-trip-icons-nextto">
+            <h2 class="card-trip-pricing"><%= flat.number_of_guests %></h2>
+            <i class="fas fa-user-friends"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%# ----------------SOURCE CARD DE KIT------------------------------------------ %>
+
+
+<%# <% @flats.each do |flat| %> 
+  <%# <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div> %>
+<%# <% end %>

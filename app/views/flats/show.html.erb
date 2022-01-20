@@ -1,0 +1,5 @@
+<h2><%= @flat.name %></h2>
+<p><%= @flat.description %></p>
+<p><%= link_to "retour à la liste", flats_path %></p>
+<p><%= link_to "modifier", edit_flat_path %></p>
+<p><%= link_to "delete", flat_path(@flat), method: :delete, data: { confirm: "Are you sure?" }%></p>
